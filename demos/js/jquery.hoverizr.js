@@ -17,6 +17,9 @@ it can be responsive by default.
 You can read more about Hoverizr and see some Demos at:
 		http://www.iliasiovis.com/hoverizr/
 
+Fork on GitHub:
+		https://github.com/iliasiovis/Hoverizr/
+
 CC 2011 - Ilias Iovis | iliasiovis.com
 ***********************************************************
 **********************************************************/
@@ -28,7 +31,6 @@ $.fn.hoverizr = function(options) {
 	//Defaults
 	var defaults = {
 		'effect':        "grayscale", //options include: 'grayscale', 'invert', 'blur'. 'noise' is under construction
-		//'transition':    "fadeOut", //to add slides
 		'overlay':       "top",  //manipulated image can be on 'top' or 'bottom'
 		'container':     "overlayed", //name of the class of the generated div wrapping the img and the canvas element
 		'width':         "responsive", //can be 'responsive' fixed width, ex. 500 or 'inherit' from the image
@@ -111,17 +113,6 @@ $.fn.hoverizr = function(options) {
 			// i+3 is alpha (the fourth element)
 			}
 			break;
-		
-		/*case "noise":
-			//Noise Effect
-			var imgn = new Image;
-			imgn.src = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAgAAZABkAAD/7AARRHVja3kAAQAEAAAAUAAA/+4ADkFkb2JlAGTAAAAAAf/bAIQAAgICAgICAgICAgMCAgIDBAMCAgMEBQQEBAQEBQYFBQUFBQUGBgcHCAcHBgkJCgoJCQwMDAwMDAwMDAwMDAwMDAEDAwMFBAUJBgYJDQsJCw0PDg4ODg8PDAwMDAwPDwwMDAwMDA8MDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwM/8AAEQgAKAAoAwERAAIRAQMRAf/EAGIAAQEAAgMAAAAAAAAAAAAAAAQDAAECBQgBAQAAAAAAAAAAAAAAAAAAAAAQAAMAAQQCAQQDAQAAAAAAAAECAxEAIRIEMUETUSIjFIEyBXERAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/APAhg/FEMEQTJDU58uXs4ByceTg6DKmLR/X+egnNsv1t+X3eMt4IPnB0Cez2wkaWoisUZVlFdhN8EB/4+mgh+/eSwNqB+xwWf7M8YE2IJHsE+fGgYv8Ao9gtezfafgUxdGBZkTPJgCCN/GgJKVZ9QmFZvJEyxdGXmTurAnGc4/5oKJHrCBQNNqdhshFb2nglgOROxI2xoDf6SrMNMAP+TD1bkoDkA5+mfuOgjOSfLNOy82fruk4/E3kAE4x/O50HadMGVAZqt0J/HDwZ8mJOcjcAbZ0EJ9sr1/2WmzdgjZsss0BPEKQR6zoJlithW00ktyFHcmoPB2B3AOCPfkaCbcpiUewyWouPimTz3R8c2GMjbQHfrJFj14UXsNZnZh4SQTdjkg6BbInVmoj+KgUUNEZn5TGc7kez40FHlcQoeNLiZxNXJIyB/dVHvPnOg1F4GapXsV7DSsoVXAAyBkkZx7230BOwR1exLu1DUbuYKvPLBgCdiPWPYzoE9XuyWJKlRZuZNHXgGU+Nidt/poKdns07KStX4kkFKTqfuUE5wHz9T40CK1e8U7NkXhNfhoEYBUOMglk/tnQEpGvylRESdVWvZ6xZR9q7DdRkeM6DPxVi9Gi1PgYc0Bbj95wV2GQSFwMjQc6DqykKo680P44nJ4cgMoTjchvXrQTtGtBCVVE4uBSrKBxfBB+5iApx4Gg//9k=";
-			
-			context.fillStyle = context.createPattern(imgn, "repeat");
-			context.fillRect(0,0,width,height); 
-			
-			context.globalAlpha = 0.2;
-			break;*/
 	
 		case "blur":
 			//Blur Effect
