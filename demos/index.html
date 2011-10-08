@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Hoverizr Demos</title>
+		<meta name="description" content="Demonstration page for the Hoverizr jQuery plugin"/>
+		<meta name="keywords" content="Hoverizr,jquery,plugin,javascript,canvas,html,css,html5"/>
+		<meta name="author" content="Ilias Iovis"/>
+		
+		<!-- external link to google repository for jquery -->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.hoverizr.js"></script>
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		
+		<script type="text/javascript">
+			//$('img').hide();
+			$(window).load(function() {
+				$('.ex1').hoverizr({speedOut: 'slow',effect:"blur",overlay: "bottom",container: "pipa",width: "100px", height: "100px",stretch: "yes"});
+				$('.ex2').hoverizr({speedOut: 'slow'});
+				$('#ex3').hoverizr({speedIn: 'slow',effect:"invert"});
+			});
+		</script>
+	</head>
+	<body>
+	<div id="wrap">
+		<h1>Hoverizr Simple Demos</h1>
+		<p>For more info and documentation go to: <a href="http://www.iliasiovis.com/hoverizr/">iliasiovis/hoverizr</a> or <a href="https://github.com/iliasiovis/Hoverizr">Hoverizr on GitHub</a></p>
+		<p>The first 2 examples are responsive so you can shrink the browser width and they will keep the aspect ratio.</p>
+		<div class="example">
+			<h2>Example 1. - Default Grayscale Hoverizr with 'slow' speedOut</h2>
+			<img class="ex2" src="img/200.jpeg" alt="" />
+			<br />
+			<img class="ex2" src="img/201.jpeg" alt="" />
+			<pre><code>$('.ex2').hoverizr({speedOut: 'slow'});</code></pre>
+		</div>
+		
+		<div class="example">
+			<h2>Example 2. - Blur effect fixed width and stretched</h2>
+			<img class="ex1" src="img/200.jpeg" alt="" />
+			<br />
+			<img class="ex1" src="img/201.jpeg" alt="" />
+			<pre><code>$('.ex1').hoverizr({speedOut: 'slow',
+                    effect:"blur",
+                    overlay: "bottom",
+                    container: "pipa",
+                    width: "100px",
+                    height: "100px",
+                    stretch: "yes"});
+			</code></pre>
+		</div>
+		
+		<div class="example">
+			<h2>Example 3. - Color Inversion with 'slow' speedIn</h2>
+			<img id="ex3" src="img/201.jpeg" alt="" />
+			<pre><code>$('#ex3').hoverizr({speedIn: 'slow',
+                    effect:"invert"});</code></pre>
+		</div>
+		
+	</div>
+	</body>
+</html>

@@ -1,0 +1,45 @@
+﻿@charset "UTF-8";
+body
+{
+	font-family:Helvetica,Arial,sans-serif;
+	font-size:100%;
+}
+
+h1
+{
+	font-size:1.75em;
+}
+
+p
+{
+	margin:10px 0;
+}
+
+#wrap
+{
+	width:60%;
+	margin:10px;
+}
+
+img
+{
+	max-width:100%;
+}
+
+div.example
+{
+	width:100%;
+	max-width:400px;
+	margin-bottom:25px;
+}
+
+pre
+{
+	margin-top:10px;
+	background:#ccc;
+	color:#333;
+	border-radius:6px;
+	padding:5px;
+	font-size:0.875em;
+	
+}
