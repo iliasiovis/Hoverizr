@@ -1,7 +1,10 @@
 Hoverizr - An image manipulation and overlay plugin for jQuery
 ver 1.0
 
-Read more here:
+How to call it:
+$('img class name or id').hoverizr();
+
+Read more info and documentation here:
 http://www.iliasiovis.com/hoverizr
 
 created by Ilias Iovis
