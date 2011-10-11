@@ -57,7 +57,7 @@ $.fn.hoverizr = function(options) {
 	
 	
 		//add elements and default styles
-		$(this).wrap('<div class="'+ options.container +'" />')
+		$(this).wrap('<div class="'+ options.container +'" />');
 		$(this).parent('.'+ options.container +'').css({'position':'relative'});
 		$(this).parent('.'+ options.container +'').append('<canvas class="canv"></canvas>');
 		$(this).next('.canv').css({'position':'absolute','top':'0','left':'0','z-index':10});
