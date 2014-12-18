@@ -1,4 +1,4 @@
-/**********************************************************
+/*!********************************************************
 ************************ Hoverizr *************************
 
 Hoverizr is an image manipulation jQuery plug in taking 
@@ -37,7 +37,8 @@ $.fn.hoverizr = function(options) {
 		'height':        "auto", //please change the height default only if you plan to use a fixed width on your initialization
 		'stretch':       "no", //if you set a fixed width for image and div the img aspect ratio will not change - it will crop the image and canvas outside, if set to "yes" the image and canvas will stretch to fill the fixed width and height you chose
 		'speedIn':       "slow", // 'slow', 'fast' or time in milliseconds, ex 1500
-		'speedOut':      "fast" // same as above
+		'speedOut':      "fast", // same as above
+		'hover':	 true, // set to false to disable hover effect. Usefull if you want to setup your own hover behaviors
 	};
 
 	//inherit from provided configuration
@@ -176,18 +177,20 @@ $.fn.hoverizr = function(options) {
 
 	
 	//hover effect
-	if(options.overlay == "top"){
-		this.parent('.'+ options.container +'').hover(function() {
-			$(this).children('.canv').stop(true,true).fadeOut(options.speedOut);
-			},function() {
-			$(this).children('.canv').stop(true,true).fadeIn(options.speedIn);
-		});
-	} else {
-		this.parent('.'+ options.container +'').hover(function() {
-			$(this).children('.canv').stop(true,true).fadeIn(options.speedOut);
-			},function() {
-			$(this).children('.canv').stop(true,true).fadeOut(options.speedIn);
-		});
+	if(options.hover === true ) {
+		if(options.overlay == "top"){
+			this.parent('.'+ options.container +'').hover(function() {
+				$(this).children('.canv').stop(true,true).fadeOut(options.speedOut);
+				},function() {
+				$(this).children('.canv').stop(true,true).fadeIn(options.speedIn);
+			});
+		} else {
+			this.parent('.'+ options.container +'').hover(function() {
+				$(this).children('.canv').stop(true,true).fadeIn(options.speedOut);
+				},function() {
+				$(this).children('.canv').stop(true,true).fadeOut(options.speedIn);
+			});
+		}
 	}
 	
 };
